@@ -19,7 +19,8 @@ class Category(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(20))
     description=db.Column(db.String(250))
-    items = db.relationship('products', backref='product_category', lazy='dynamic')
+    photo_categoria=db.Column(db.String(200))
+    # items = db.relationship('products', backref='product_category', lazy='dynamic')
     
     def __repr__(self):
         return self.name
@@ -28,8 +29,8 @@ class Products(db.Model):
     id=db.Column(db.Integer,primary_key=True)#autoincrement=True
     name=db.Column(db.String(50))
     description=db.Column(db.String(1000))    
-    category_id=db.Column(db.Integer,db.ForeignKey('Category.id'))
-    category =db.Relationship('Category', backref='category_products')
+    # category_id=db.Column(db.Integer,db.ForeignKey('Category.id'))
+    # category =db.Relationship('Category', backref='category_products')
     price=db.Column(db.Float)
     photo_product=db.Column(db.String(120))
     #discount_price=db.Column(db.Float)

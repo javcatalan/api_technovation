@@ -16,7 +16,7 @@ Users_schema=UserSerializer(many=True)
 class CategoriaSerializer(ma.SQLAlchemyAutoSchema):
     class Meta:
         model=Category
-        fields=('id','name','description')
+        fields=('id','name','description','photo_categoria')
         
 Categoria_schema=CategoriaSerializer()
 Categorias_schema=CategoriaSerializer(many=True)  
@@ -24,7 +24,7 @@ Categorias_schema=CategoriaSerializer(many=True)
 class ProductosSerializer(ma.SQLAlchemyAutoSchema):
     class Meta:
         model=Products
-        fields=('id','name','description','price','photo_producto')
+        fields=('id','name','description','price','photo_product')
         
 Producto_schema=ProductosSerializer()
 Productos_schema=ProductosSerializer(many=True)  
