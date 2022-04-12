@@ -1,4 +1,3 @@
-from unittest import result
 from flask import redirect, render_template,request,flash,url_for,make_response,jsonify
 from app import app,db,allowed_file
 from app.models import usuarios,camino_mesa,calzado,servilletas,manteles,telas_tipicas,sandalias,tenis,tacones,blusas,faldas,categorias
